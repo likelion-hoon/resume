@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jonghoon.resume.board.BoardDAO">
+
+	<select id="getBoardList" resultType="com.jonghoon.resume.board.BoardDTO">
+		SELECT * FROM BOARD ORDER BY IDX DESC
+	</select>
+	
+	<insert id="writeBoard">
+		INSERT INTO BOARD (TITLE, CONTENT) VALUES (#{param1}, #{param2})
+	</insert>
+	
+	<delete id="deleteBoard">
+		DELETE FROM BOARD WHERE IDX = #{param1}
+	</delete>
+	
+	<select id="getBoard" resultType="com.jonghoon.resume.board.BoardDTO">
+		SELECT * FROM BOARD WHERE IDX = #{param1}
+	</select>
+	
+	<update id="updateBoard">
+		UPDATE BOARD SET title = #{param1}, content = #{param2} WHERE IDX = #{param3}
+	</update>
+	
+	<update id="increaseHit">
+		UPDATE BOARD SET HIT = HIT + 1 WHERE IDX = #{param1}
+	</update>
+</mapper>

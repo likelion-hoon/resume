@@ -8,6 +8,7 @@
 	<title>Insert title here</title>
 </head>
 <body>
+	<h2> 글을 작성해주세요. </h2>
 	<form action="write" method="post">
 		<table width="500" cellpadding="0" border="1">
 			<tr>
@@ -19,7 +20,7 @@
 				<td><input type="text" name="content" size="150"></td>
 			</tr>
 			<tr>
-				<td colspan="2"><input type="submit" value="입력">&nbsp;&nbsp; <a href="board">목록보기</a></td>
+				<td colspan="2"><input type="submit" value="작성">&nbsp;&nbsp; <a href="board">목록보기</a></td>
 			</tr>
 		</table>
 	</form>

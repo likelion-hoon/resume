@@ -19,18 +19,19 @@
 				<td>작성날짜</td>
 			</tr>
 			
-			<%-- <c:forEach items="${list}" var="dto">
+			<c:forEach items="${list}" var="dto">
 				<tr>
 					<td>${dto.idx}</td>
-					<td>${dto.title} </td>
+					<td><a href="show?bId=${dto.idx}">${dto.title}</a></td>
 					<td>${dto.content} </td>
 					<td>${dto.hit} </td>
 					<td>${dto.recom} </td>
 					<td>${dto.date} </td>
 				</tr>
-			</c:forEach> --%>
+			</c:forEach>
 			
 		</table>
 		<a href="write"> 글쓰기 </a>
+		<a href="<%= application.getContextPath() %>"> 메인화면 </a>
 </body>
 </html>
